@@ -1,0 +1,35 @@
+!.gitignore
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.AppleDB
+.AppleDesktop
+.apdisk
+
+
+### Node
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+
+# Do not sync dependencies
+node_modules
+
+# Do not sync config files
+
+### SublimeText project files
+*.sublime-workspace

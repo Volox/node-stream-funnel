@@ -1,0 +1,30 @@
+{
+  "name": "stream-funnel",
+  "version": "0.1.0",
+  "description": "Node stream funnel/collector. Merge/join provided streams.",
+  "main": "index.js",
+  "scripts": {},
+  "repository" : {
+    "type" : "git",
+    "url" : "git://github.com/Volox/node-stream-funnel.git"
+  },
+  "homepage" : "https://github.com/Volox/node-stream-funnel",
+  "keywords" : [
+    "join",
+    "stream",
+    "merge",
+    "collect"
+  ],
+  "author" : {
+    "name" : "Riccardo Volonterio",
+    "email" : "voloxxx@gmail.com",
+    "url" : "http://volox.io"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "debug": "2.x"
+  },
+  "devDependencies": {
+    "eslint-config-volox": "*"
+  }
+}
