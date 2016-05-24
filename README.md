@@ -5,19 +5,20 @@ Join/merge *n* streams into one. The resulting stream will end when all the inpu
 ## Example
 
 ```js
-let Funnel = require( 'stream-funnel' );
-let stream1 = new Stream();
-let stream2 = new Stream();
+const Funnel = require( 'stream-funnel' );
+const stream1 = new Stream();
+const stream2 = new Stream();
 
-let funnel = new Funnel( 'Hubert' );
+const funnel = new Funnel();
 
 
-funnel.add( stream1 );
-funnel.add( stream2 );
+funnel.addSource( stream1 );
+funnel.addSource( stream2 );
+// OR funnel.addSources( [ stream1, stream2 ] );
 funnel.pipe( process.out );
 ```
 
 
 ## Debug
 
-This module uses the `debug` package, add `stream-collector` to the `DEBUG` env variable to se the logs.
+This module uses the `debug` package, add `stream-funnel` to the `DEBUG` env variable to see the logs.
