@@ -2,8 +2,12 @@
   "name": "stream-funnel",
   "version": "0.1.0",
   "description": "Node stream funnel/collector. Merge/join provided streams.",
-  "main": "index.js",
-  "scripts": {},
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "tslint src/**/*.ts && tsc",
+    "prepublish": "npm run build",
+    "test": "mocha"
+  },
   "repository" : {
     "type" : "git",
     "url" : "git://github.com/Volox/node-stream-funnel.git"
@@ -22,9 +26,13 @@
   },
   "license": "MIT",
   "dependencies": {
-    "debug": "2.x"
+    "moment": "2.x"
   },
+  "typings": "./lib/index.d.ts",
   "devDependencies": {
-    "eslint-config-volox": "*"
+    "chai": "3.x",
+    "mocha": "2.x",
+    "tslint": "^3.8.1",
+    "typescript": "^1.8.10"
   }
 }

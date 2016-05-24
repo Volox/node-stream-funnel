@@ -11,7 +11,7 @@ insert_final_newline = false
 trim_trailing_whitespace = true
 
 # 2 Space indentation
-[*.js]
+[*.{js|ts}]
 indent_style = space
 indent_size = 2
 

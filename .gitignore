@@ -27,9 +27,10 @@ lib-cov
 
 
 # Do not sync dependencies
-node_modules
+node_modules/
 
-# Do not sync config files
+# Do not sync compiled files
+lib/
 
 ### SublimeText project files
 *.sublime-workspace

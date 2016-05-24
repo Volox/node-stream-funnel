@@ -5,16 +5,16 @@ Join/merge *n* streams into one. The resulting stream will end when all the inpu
 ## Example
 
 ```js
-let Collector = require( 'node-stream-collector' );
+let Funnel = require( 'stream-funnel' );
 let stream1 = new Stream();
 let stream2 = new Stream();
 
-let collector = new Collector( 'Hubert' );
+let funnel = new Funnel( 'Hubert' );
 
 
-collector.add( stream1 );
-collector.add( stream2 );
-collector.pipe( process.out );
+funnel.add( stream1 );
+funnel.add( stream2 );
+funnel.pipe( process.out );
 ```
 
 
