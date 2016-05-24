@@ -1,5 +1,5 @@
 // Load system modules
-import { PassThrough, Readable, Transform } from 'stream';
+import { PassThrough, TransformOptions } from 'stream';
 
 // Load modules
 import * as initDebug from 'debug';
@@ -14,32 +14,32 @@ const debug = initDebug( 'stream-funnel' );
 // Module functions declaration
 
 // Module type declaration
-type ValidStream = Readable | Transform | PassThrough;
 
 // Module class declaration
 class Funnel extends PassThrough {
   private sources: number = 0;
 
-  constructor() {
-    super( { objectMode: true } );
+  constructor( options: TransformOptions ) {
+    super( options );
+    // super( { objectMode: true } );
     this.setMaxListeners( 0 );
   }
 
   // Methods
-  public addSource( source: Readable | Transform | PassThrough ) {
+  public addSource( source: NodeJS.ReadableStream ) {
     this.sources += 1;
     debug( 'Adding source: %d', this.sources );
 
     source.on( 'end', () => this.sourceFinished( source ) );
     source.pipe( this, { end: false } );
   }
-  public addSources( sources: (Readable | Transform | PassThrough)[] ) {
+  public addSources( sources: NodeJS.ReadableStream[] ) {
     for( const source of sources ) {
       this.addSource( source );
     }
   }
 
-  protected sourceFinished( source: Readable | Transform | PassThrough ) {
+  public sourceFinished( source: NodeJS.ReadableStream ) {
     this.sources -= 1;
     debug( 'Source finished: %d', this.sources );
 
