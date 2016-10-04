@@ -16,7 +16,7 @@ const debug = initDebug( 'stream-funnel' );
 // Module type declaration
 
 // Module class declaration
-class Funnel extends PassThrough {
+export default class Funnel extends PassThrough {
   private sources: number = 0;
 
   constructor( options: TransformOptions ) {
@@ -53,10 +53,5 @@ class Funnel extends PassThrough {
     }
   }
 }
-
-// Module initialization (at first load)
-
-// Module exports
-export = Funnel;
 
 //  50 6F 77 65 72 65 64  62 79  56 6F 6C 6F 78

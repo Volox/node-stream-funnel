@@ -3,17 +3,12 @@
     "declaration": true,
     "module": "commonjs",
     "noImplicitAny": true,
-    "target": "es5",
+    "strictNullChecks": true,
+    "target": "es6",
     "outDir": "lib",
     "sourceMap": true
   },
-  "files": [
-    "src/index.ts",
-    "typings/index.d.ts"
-  ],
-  "filesGlob": [
-    "typings/index.d.ts",
+  "include": [
     "src/**/*.ts"
-  ],
-  "compileOnSave": true
+  ]
 }

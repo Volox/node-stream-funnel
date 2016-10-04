@@ -3,10 +3,10 @@
   "version": "2.1.0",
   "description": "Node stream funnel/collector. Merge/join provided streams.",
   "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
-    "build": "tslint src/**/*.ts && tsc",
-    "prepublish": "npm run build",
-    "test": "mocha"
+    "build": "tsc",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -22,17 +22,15 @@
   "author": {
     "name": "Riccardo Volonterio",
     "email": "voloxxx@gmail.com",
-    "url": "http://volox.io"
+    "url": "https://volox.io"
   },
   "license": "MIT",
   "dependencies": {
-    "moment": "2.x"
+    "debug": "^2.2.0"
   },
-  "typings": "./lib/index.d.ts",
   "devDependencies": {
-    "chai": "3.x",
-    "mocha": "2.x",
-    "tslint": "^3.8.1",
-    "typescript": "^1.8.10"
+    "@types/debug": "0.0.29",
+    "@types/node": "^6.0.42",
+    "typescript": "^2.0.3"
   }
 }
