@@ -4,7 +4,7 @@
     "module": "commonjs",
     "noImplicitAny": true,
     "strictNullChecks": true,
-    "target": "es6",
+    "target": "es5",
     "outDir": "lib",
     "sourceMap": true
   },
